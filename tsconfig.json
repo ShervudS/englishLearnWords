@@ -1,0 +1,64 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "baseUrl": ".",
+        "paths": {
+            "_/*": [
+                "./src/*"
+            ],
+            "_app/*": [
+                "./src/app/*"
+            ],
+            "_processed/*": [
+                "./src/processed/*"
+            ],
+            "_pages/*": [
+                "./src/pages/*"
+            ],
+            "_widgets/*": [
+                "./src/widgets/*"
+            ],
+            "_features/*": [
+                "./src/features/*"
+            ],
+            "_entities/*": [
+                "./src/entities/*"
+            ],
+            "_shared/*": [
+                "./src/shared/*"
+            ],
+            "_assets/*": [
+                "./src/assets/*"
+            ],
+            "_styles/*": [
+                "./src/styles/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ],
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
+}

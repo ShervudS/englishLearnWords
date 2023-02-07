@@ -3,7 +3,8 @@ export enum ROUTE_PATH {
     ABOUT = '/about',
     PRICE = '/price',
     DELIVERY = '/delivery',
-    CONTACTS = '/contacts'
+    CONTACTS = '/contacts',
+    WORDS = '/words'
 }
 
 export enum APP_THEME {

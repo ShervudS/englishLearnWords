@@ -7,6 +7,7 @@ import {notFoundRoute} from "_pages/NotFound";
 import {contactsRoute} from "_pages/Contacts";
 import {aboutRoute} from "_pages/About";
 import {priceRoute} from "_pages/Price";
+import { wordsRoute } from '_pages/Words/Words'
 import {ROUTE_PATH} from "_assets/constants";
 
 const routes = [
@@ -15,6 +16,7 @@ const routes = [
     {path: ROUTE_PATH.ABOUT, route: aboutRoute},
     {path: ROUTE_PATH.PRICE, route: priceRoute},
     {path: ROUTE_PATH.DELIVERY, route: deliveryRoute},
+    {path: ROUTE_PATH.WORDS, route: wordsRoute},
 ]
 
 // 2. Create router

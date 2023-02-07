@@ -7,15 +7,13 @@ interface IThemeSwitcher {
 
 }
 
-
 export const ThemeSwitcher: React.FunctionComponent<IThemeSwitcher> = () => {
     const themeStore = useStore($themeStore)
 
-
-
     return (
         <div>
-            <Switcher value={!!themeStore} onAction={} />
+            <Switcher value={!!themeStore} onAction={() => {
+            }} />
         </div>
     )
 }

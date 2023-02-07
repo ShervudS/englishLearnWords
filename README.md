@@ -12,5 +12,6 @@ Frontend for English Learn Words service
 - Husky
 - EsLint
 - StyleLint
+- FSD (Feature Sliced Design)
 
 

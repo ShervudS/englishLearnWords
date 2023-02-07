@@ -19,6 +19,11 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
     box-sizing: inherit;
     width: 100%;
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
   }
 
   ul, li, ol {
@@ -32,6 +37,12 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    cursor: pointer
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  div#root {
+    height: 100%;
   }
 `

@@ -4,5 +4,5 @@ import { checkUserPreferenceTheme } from '_processed/Themes/utils'
 
 export const toggleThemeEvent = createEvent()
 
-export const $themeStore = createStore<TTheme>(checkUserPreferenceTheme()).on(toggleThemeEvent, prev => )
+export const $themeStore = createStore<TTheme>(checkUserPreferenceTheme())
 

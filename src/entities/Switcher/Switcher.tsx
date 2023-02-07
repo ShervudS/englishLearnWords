@@ -15,7 +15,7 @@ export const Switcher: React.FunctionComponent<ISwitcher> = (props) => {
     return (
         <SwitcherWrapper>
             <SwitcherLabel fontSizeLabel={fontSizeLabel}>{startLabel}</SwitcherLabel>
-            <input id={id} type='checkbox' hidden checked={switchState} />
+            <input id={id} type='checkbox' hidden defaultChecked={switchState} />
             <SwitcherView value={switchState} onClick={toggleSwitcher} />
             <SwitcherLabel fontSizeLabel={fontSizeLabel}>{endLabel}</SwitcherLabel>
         </SwitcherWrapper>

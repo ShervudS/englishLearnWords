@@ -1,9 +1,10 @@
 import React from 'react'
-import * as Styled from './UserPreview.styles'
 import { useEvent } from 'effector-react/effector-react.umd'
-// import { openModal } from '_widgets/ModalTemplate/store'
-import { Icons } from '_entities/Icons'
-import { toggleIsOpenDrawer } from '_widgets/DrawerTemplate/store'
+import { Icons } from '_shared/Icons'
+import { toggleIsOpenDrawer } from '_widgets/DrawerTemplate/models'
+import { DRAWER_ITEMS } from '_assets/constants'
+import { ICON_NAMES } from '_assets/constants/namesOnConfig'
+import * as Styled from './UserPreview.styles'
 
 interface IUserPreview {}
 
@@ -11,18 +12,20 @@ export const UserPreview: React.FunctionComponent<IUserPreview> = () => {
     const onOpenUserDrawer = useEvent(toggleIsOpenDrawer)
 
     const onOpenDrawer = () => {
-        onOpenUserDrawer()
+        onOpenUserDrawer({
+            isOpen: true,
+            drawerComponent: DRAWER_ITEMS.USER_DRAWER,
+        })
     }
 
     return (
         <Styled.UserPreviewWrapper>
-            если пользователь авторизован
             <Styled.UserPhoto>
                 <img src="https://via.placeholder.com/30" alt="logo" />
             </Styled.UserPhoto>
             <div>[USER_NAME]</div>
             <Styled.UserIconButton onClick={onOpenDrawer}>
-                <Icons name="menu" />
+                <Icons name={ICON_NAMES.MENU} />
             </Styled.UserIconButton>
         </Styled.UserPreviewWrapper>
     )

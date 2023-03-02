@@ -1,22 +1,27 @@
 import React from 'react'
 import { createRoute } from 'atomic-router'
 import { useEvent } from 'effector-react/effector-react.umd'
-import { toggleModalVisible } from '_widgets/ModalTemplate/store'
+import { onOpenModalEvent } from '_widgets/ModalTemplate/models'
+import { FormTemplate } from '_entities/FormTemplate'
+import { PageContainer } from '_shared/PageContainer'
 
 export const homeRoute = createRoute()
 
 export const Home: React.FunctionComponent = () => {
-    const onClickUserButton = useEvent(toggleModalVisible)
+    const onClickUserButton = useEvent(onOpenModalEvent)
 
     const onOpenDrawer = () => {
         console.log('sdfdsg')
-        onClickUserButton()
+        onClickUserButton({ isOpen: true })
     }
 
     return (
         <div>
-            Home
-            <button onClick={onOpenDrawer}>открыть Дравер</button>
+            <PageContainer>
+                Home
+                {/* <FormTemplate /> */}
+                <button onClick={onOpenDrawer}>открыть Дравер</button>
+            </PageContainer>
         </div>
     )
 }

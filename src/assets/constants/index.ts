@@ -4,10 +4,12 @@ export enum ROUTE_PATH {
     PRICE = '/price',
     DELIVERY = '/delivery',
     CONTACTS = '/contacts',
-    WORDS = '/words'
+    WORDS = '/words',
 }
 
 export enum APP_THEME {
     DARK = 'dark',
-    LIGHT = 'light'
+    LIGHT = 'light',
 }
+
+export { DRAWER_ITEMS } from './namesOnConfig'

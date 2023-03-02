@@ -1,5 +1,5 @@
 import React from 'react'
-import { IPageContainer } from '_entities/PageContainer/PageContainer.types'
+import { IPageContainer } from './PageContainer.types'
 import * as Styled from './PageContainer.styles'
 
 export const PageContainer: React.FunctionComponent<IPageContainer> = ({

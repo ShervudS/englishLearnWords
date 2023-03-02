@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStore } from 'effector-react'
-import { Switcher } from '_entities/Switcher'
+import { Switcher } from '_shared//Switcher'
 import { $themeStore } from '_processed/Themes/store'
 
 interface IThemeSwitcher {

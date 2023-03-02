@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ISwitcherLabelStyleProps, ISwitcherViewStyleProps } from '_entities/Switcher/Switcher.types'
+import { ISwitcherLabelStyleProps, ISwitcherViewStyleProps } from './Switcher.types'
 
 export const SwitcherWrapper = styled.div`
   display: flex;
@@ -13,11 +13,11 @@ export const SwitcherLabel = styled.label<ISwitcherLabelStyleProps>`
 
 export const SwitcherView = styled.div<ISwitcherViewStyleProps>`
   position: relative;
-  width: 4.5rem;
+  width: 4.4rem;
   height: 2rem;
-  border: 1.2rem solid aqua;
+  border: 1.2rem solid var(--light-color);
   border-radius: 1.2rem;
-  background-color: aqua;
+  background-color: var(--light-color);
   cursor: pointer;
 
   &::after {
@@ -29,7 +29,7 @@ export const SwitcherView = styled.div<ISwitcherViewStyleProps>`
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-color: red;
+    background-color: var(--brand-color);
     transition: transform .2s ease;
   }
 `

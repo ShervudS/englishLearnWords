@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { SwitcherView, SwitcherWrapper, SwitcherLabel } from '_entities/Switcher/Switcher.styles'
-import { ISwitcher } from '_entities/Switcher/Switcher.types'
+import { SwitcherView, SwitcherWrapper, SwitcherLabel } from './Switcher.styles'
+import { ISwitcher } from './Switcher.types'
 
 export const Switcher: React.FunctionComponent<ISwitcher> = (props) => {
     const { startLabel, endLabel, id, sizeMultiplier = 1, fontSizeLabel = '1.6rem', value, onAction } = props

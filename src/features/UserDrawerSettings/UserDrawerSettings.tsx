@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import * as Styled from './UserDrawerSettings.styles'
 
-interface IUserDrawerSettings {
+interface IUserDrawerSettings {}
 
-};
-
-export const UserDrawerSettings: React.FunctionComponent<IUserDrawerSettings> = () => {
- return (
-  <div>
-
-  </div>
- );
-};
+export const UserDrawerSettings: React.FunctionComponent<
+    IUserDrawerSettings
+> = () => {
+    return (
+        <Styled.userDrawerSettingsWrapper>
+            Дравер пользователя
+        </Styled.userDrawerSettingsWrapper>
+    )
+}

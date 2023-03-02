@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'atomic-router-react'
-import { Switcher } from '_entities/Switcher'
+import { useEvent } from 'effector-react'
+import { Switcher } from '_shared//Switcher'
 import { UserPreview } from '_features/UserPreview'
 import { ROUTE_PATH } from '_assets/constants'
+import { onOpenModalEvent } from '_widgets/ModalTemplate/models'
 import * as Styled from './Header.styles'
 
 export const Header: React.FunctionComponent = () => {
+    const [loginned, setLoginned] = useState(true)
+    const onOpenModalAuth = useEvent(onOpenModalEvent)
+
+    const onAuth = () => {
+        onOpenModalAuth({
+            isOpen: true,
+            modalConfig: { modalBodyComponentsName: 'auth' },
+        })
+    }
 
     return (
         <Styled.HeaderWrapper>
@@ -20,14 +31,17 @@ export const Header: React.FunctionComponent = () => {
                 </Styled.NavList>
 
                 <Styled.UserSettings>
-                    <Switcher value={false} onAction={() => {
-                    }} />
-                    <div>
-                        <div>Блок авторизации</div>
-                        <button>Авторизоваться</button>
-                    </div>
-                    <UserPreview />
+                    <Switcher value={false} onAction={() => {}} />
+
+                    {!loginned ? (
+                        <Styled.LoginButton onClick={onAuth}>
+                            Авторизоваться
+                        </Styled.LoginButton>
+                    ) : (
+                        <UserPreview />
+                    )}
                 </Styled.UserSettings>
             </Styled.HeaderContainer>
-        </Styled.HeaderWrapper>)
+        </Styled.HeaderWrapper>
+    )
 }

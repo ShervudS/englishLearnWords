@@ -25,7 +25,7 @@ export default defineConfig({
         minify: 'terser',
         rollupOptions: {
             output: {
-                chunkFileNames: '[hash].[ext]',
+                chunkFileNames: '[hash]',
                 // assetFileNames: '',
                 entryFileNames: 'js/[hash].js',
             },

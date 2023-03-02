@@ -3,9 +3,6 @@ import variables from './variables'
 
 export const GlobalStyles = createGlobalStyle`
   ${variables}
-
-  ;
-
   *,
   *::before,
   *::after {
@@ -23,7 +20,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    overflow-x: hidden;
     height: 100%;
+    background-color: var(--white-color);
   }
 
   ul, li, ol {
@@ -32,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--black);
+    color: inherit;
     transition: var(--transition);
   }
 

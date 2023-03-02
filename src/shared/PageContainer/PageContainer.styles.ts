@@ -8,7 +8,7 @@ export const PageContainerWrapper = styled.div`
 
 export const PageContainerInner = styled.div`
   max-width: 192rem;
-  padding: 0 2rem;
-  margin: 0 auto;
   height: inherit;
+  margin: 0 auto;
+  padding: 0 2rem;
 `
